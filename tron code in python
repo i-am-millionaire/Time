@@ -1,0 +1,37 @@
+# Import necessary libraries
+import requests
+import hashlib
+
+# Replace with your Tron wallet address and pool information
+wallet_address = "your_tron_wallet_address"
+pool_url = "https://octopus.unmineable.com"
+worker_name = "hello"
+
+# Set the difficulty level and target
+difficulty = 1000000
+target = 2 ** 256 // difficulty
+
+# Create a mining function
+def mine_tron_block():
+    nonce = 0
+    while True:
+        data = f"{wallet_address}:{nonce}:{worker_name}"
+        block = hashlib.sha256(data.encode()).hexdigest()
+        block_int = int(block, 16)
+
+        if block_int < target:
+            # Found a valid block
+            print(f"Block mined with nonce {nonce}")
+            # Submit the block to the mining pool
+            response = requests.post(pool_url, data={"block": block})
+            if response.status_code == 200:
+                print("Block submitted to the pool.")
+            else:
+                print("Failed to submit block to the pool.")
+
+            break
+
+        nonce += 1
+
+# Start mining
+mine_tron_block()
