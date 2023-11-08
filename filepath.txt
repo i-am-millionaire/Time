@@ -1,0 +1,42 @@
+import hashlib
+import requests
+
+def read_text_file(file_path):
+    with open(file_path, 'r') as file:
+        content = file.read()
+    return content
+
+def generate_hash(text_content):
+    m = hashlib.sha256()
+    m.update(text_content.encode('utf-8'))
+    return m.hexdigest()
+
+def send_hash_to_minerpool(hash, mining_config):
+    url = f'http://{mining_config["minerpool"]}/submitHash'
+    payload = {'hash': hash, 'username': mining_config['username'], 'password': mining_config['password']}
+    
+    response = requests.post(url, data=payload)
+    
+    if response.status_code == 200:
+        print(f"Hash submitted successfully to {url}")
+    else:
+        print(f"Failed to submit hash to {url}. Status code: {response.status_code}")
+
+# Specify the path to your text file
+file_path = 'your_text_file.txt'
+
+# Read the text file
+text_content = read_text_file(file_path)
+
+# Generate the hash of the text content
+hash = generate_hash(text_content)
+
+# Mining configuration
+mining_config = {
+    'minerpool': 'rx.unmineable.com:3333',
+    'username': 'TRX:TUfEFRwukdgci259qg7KwT6c1HrB2AdMCB.v1',
+    'password': 'x',
+}
+
+# Send the hash to the mining pool
+send_hash_to_minerpool(hash, mining_config)
